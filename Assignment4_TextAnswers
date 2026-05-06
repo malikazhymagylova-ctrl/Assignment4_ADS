@@ -1,0 +1,107 @@
+
+TASK 1 
+Graph adjacency list:
+A: C B D
+B: A C E G
+C: A B D
+D: C A
+E: G F B
+F: G E
+G: F B
+
+DFS traversal starting from A:
+Start at A
+Visit A
+
+Go to C
+Visit C
+
+From C go to B
+Visit B
+
+From B go to E
+Visit E
+
+From E go to G
+Visit G
+
+From G go to F
+Visit F
+
+F has no unvisited neighbors
+Backtrack to G
+
+G finished
+Backtrack to E
+
+E finished
+Backtrack to B
+
+B finished
+Backtrack to C
+
+From C go to D
+Visit D
+
+D finished
+Backtrack to C
+
+C finished
+Backtrack to A
+
+DFS completed
+
+Final DFS order:
+A → C → B → E → G → F → D
+
+
+TASK 2 
+BFS traversal starting from A:
+Start at A
+Visit A
+
+Add neighbors:
+C, B, D
+
+Visit C
+
+Visit B
+Add neighbors:
+E, G
+
+Visit D
+
+Visit E
+Add neighbor:
+F
+
+Visit G
+
+Visit F
+
+BFS completed
+
+Final BFS order:
+A → C → B → D → E → G → F
+
+
+TASK 4
+Road distances:
+Glasgow → Stirling = 50
+Glasgow → Edinburgh = 70
+Stirling → Perth = 40
+Stirling → Edinburgh = 50
+Perth → Dundee = 60
+Perth → Edinburgh = 100
+
+Possible paths from Edinburgh to Dundee:
+1) Edinburgh → Perth → Dundee
+100 + 60 = 160
+2) Edinburgh → Stirling → Perth → Dundee
+50 + 40 + 60 = 150
+
+Shortest path:
+Edinburgh → Stirling → Perth → Dundee
+
+Total distance:
+150
